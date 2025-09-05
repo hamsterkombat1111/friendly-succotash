@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат оплаты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-result {{ status }}">
+            <h1>{{ message }}</h1>
+            <p>Номер заказа: #{{ order_id }}</p>
+            <a href="{{ url_for('index') }}" class="btn">Вернуться в магазин</a>
+        </div>
+    </div>
+</body>
+</html>

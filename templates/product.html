@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('index') }}">← Назад к товарам</a>
+        <div class="product-detail">
+            <h1>{{ product.name }}</h1>
+            <p>{{ product.description }}</p>
+            <p class="price">{{ product.price }} руб.</p>
+            <a href="{{ url_for('checkout', product_id=product.id) }}" class="btn">Купить сейчас</a>
+        </div>
+    </div>
+</body>
+</html>
